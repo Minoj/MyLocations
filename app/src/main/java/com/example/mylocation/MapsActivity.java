@@ -44,7 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = findViewById(R.id.cordinata_text);
+        textView = findViewById(R.id.cord_text);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLastLocation();
     }
@@ -63,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     curentlocation = location;
                     String string = String.valueOf(curentlocation.getLatitude());
                     String string2 = String.valueOf(curentlocation.getLongitude());
-                    textView.setText(string + " , " + string2);
+                    textView.setText(string+" "+string2);
                     SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                             .findFragmentById(R.id.map);
                     mapFragment.getMapAsync(MapsActivity.this);
@@ -100,5 +100,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 break;
         }
+//        commit
     }
 }
