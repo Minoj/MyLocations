@@ -100,6 +100,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 break;
         }
-//        commit
     }
 }
